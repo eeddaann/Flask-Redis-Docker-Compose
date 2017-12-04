@@ -9,7 +9,7 @@ r=redis.StrictRedis('redis',6379,1, decode_responses=True,charset='utf-8')
 
 @app.route('/')
 def start():
-    return  render_template('hadgama.html')
+    return  render_template('index.html')
 
 @app.route('/write',methods=['GET','POST']) #1
 def write():
