@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Drive Lego</title>
+</head>
+<body>
+    <form method="post" >
+        <input type="radio" name="do" value="Forward">Forward<br>
+        <input type="radio" name="do" value="Back">Back<br>
+        <input type="radio" name="do" value="Left">Left<br>
+        <input type="radio" name="do" value="Right">Right<br>
+        <input type="radio" name="do" value="Stop">Stop<br>
+        <input type="radio" name="do" value="Exit">Exit<br>
+        <button type="submit">Transmit Direction</button><br>
+    </form>
+    <h2>You asked for this direction : </h2><br>
+    {{ requested_dir }}
+    <h2>Status of driving in data base was : </h2><br>
+    {{ direction_db }}
+    <h2>Color in data base is : </h2><br>
+    {{ color_db }}
+    <form action="/">
+        <button type="submit">Back</button>
+    </form><br>
+    <form action="/color">
+        <button type="submit">Check Color</button>
+    </form>
+</body>
+</html>
